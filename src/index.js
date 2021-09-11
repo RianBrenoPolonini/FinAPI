@@ -27,6 +27,10 @@ app.post("/account", (req, resp) => {
     return resp.status(201).send("Usuário cadastrado com sucesso");
 })
 
+app.get("/", (req, resp) => {
+    return resp.json(dados);
+})
+
 app.listen(3333, (erro) => {
     if(erro){
         console.log("Deu ruim!");
